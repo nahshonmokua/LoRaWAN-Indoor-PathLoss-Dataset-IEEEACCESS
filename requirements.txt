@@ -1,13 +1,11 @@
+
 python-dotenv
-
 pandas
-
 influxdb
-
 matplotlib
-
 numpy
-
 seaborn
-
+scikit-learn
+scipy
 plotly
+openpyxl
