@@ -1,0 +1,13 @@
+python-dotenv
+
+pandas
+
+influxdb
+
+matplotlib
+
+numpy
+
+seaborn
+
+plotly
