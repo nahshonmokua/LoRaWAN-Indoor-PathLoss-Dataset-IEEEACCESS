@@ -3,3 +3,6 @@ For the analysis done in this work, a 6-month dataset was used with campaign dat
 start_time = '2024-09-26 13:00:00'  # Berlin time
 
 end_time = '2025-04-01 10:00:00'  # Berlin time
+
+
+Starting 4th July Midday > SF7 to SF10
