@@ -17,6 +17,11 @@ These models help address **signal attenuation** in complex indoor settings, off
 ---
 
 ## 📊 Dataset
+
+<figure>
+  <img src="env_6vars_6dev_3x2.gif" alt="Dataset GIF" style="max-width:100%; height:auto;" />
+</figure>
+
 The dataset includes measurements of:
 - **Environmental Parameters**: Temperature, humidity, CO₂, PM2.5, and pressure.
 - **Signal Characteristics**: RSSI, SNR, Spreading Factor, and Time on Air.
@@ -52,6 +57,9 @@ Nahshon Mokua Obiri and Kristof Van Laerhoven, [“A Comprehensive Data Descript
 ## 🔍 Other Publications and Talks
 - <a href="https://doi.org/10.1109/OJCOMS.2024.3484002" target="_blank">A Survey of LoRaWAN-integrated Wearable Sensor Networks for Human Activity Recognition: Applications, Challenges and Possible Solutions</a>
 - Presented a light talk at the <a href="https://www.uni-siegen.de/zess/kombibox/zess_phd_forum_2024.html" target="_blank"><strong>ZESS PhD Forum 2024</strong></a>: "LoRaWAN Path Loss Measurements in an Indoor Setting, including Human and Environmental Effects."
+- <a href="https://doi.org/10.1109/EuCNC/6GSummit63408.2025.11037092" target="_blank">A Statistical Evaluation of Indoor Lorawan Environment-Aware Propagation for 6G: MLR, ANOVA, and Residual Distribution Analysis</a>
+- <a href="https://doi.org/10.48550/arXiv.2510.04346" target="_blank">Environment-Aware Indoor LoRaWAN Path Loss: Parametric Regression Comparisons, Shadow Fading, and Calibrated Fade Margins</a>
+- <a href="https://doi.org/10.48550/arXiv.2505.01185" target="_blank">Environment-Aware Indoor LoRaWAN Ranging Using Path Loss Model Inversion and Adaptive RSSI Filtering</a>
 
 ---
 
