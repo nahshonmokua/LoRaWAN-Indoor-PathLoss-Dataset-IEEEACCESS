@@ -3,7 +3,7 @@
 This repository provides data and models for understanding **LoRaWAN signal behavior in indoor environments**, focusing on how factors like relative humidity, temperature, particulate matter, barometric pressure and CO₂ levels impact path loss and shadowing. The main goal is to optimize indoor LoRaWAN networks for smart IoT applications, enhancing both **signal reliability and network planning**.
 
 <div align="center">
-    <img src="sensor network design.png" alt="LoRaWAN Indoor Network Deployment Overview" width="70%">
+    <img src="assets/sensor network design.png" alt="LoRaWAN Indoor Network Deployment Overview" width="70%">
 </div>
 
 ---
@@ -19,7 +19,7 @@ These models help address **signal attenuation** in complex indoor settings, off
 ## 📊 Dataset
 
 <figure>
-  <img src="env_6vars_6dev_3x2.gif" alt="Dataset GIF" style="max-width:100%; height:auto;" />
+  <img src="assets/env_6vars_6dev_3x2.gif" alt="Dataset GIF" style="max-width:100%; height:auto;" />
 </figure>
 
 The dataset includes measurements of:
