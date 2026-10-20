@@ -34,7 +34,7 @@ The dataset includes measurements of:
    - **Sensor Deployment**: Six end devices were strategically placed on the University of Siegen campus to capture a wide range of conditions.  
    - **Environmental Monitoring**: Measurements include CO₂ levels, humidity, temperature, and PM2.5 concentrations.
    - **Data Transmission**: The data was collected using a LoRaWAN network with transmissions to an InfluxDB database via MQTT.
-   - **Transmit Power**: The end devices leave LoRaWAN's ADR on and never set a power, so The Things Network chose the transmit power of each uplink: 14 dBm for about two thirds of the uplinks, 12 dBm for about one third, and less for under 1 %. The export does not record it. Notebook 01b replays TTN's ADR on the export and saves the power of every uplink (`tx_power_per_uplink.csv`); notebook 02 adds it as `tx_power` (dBm), and the path loss `exp_pl` is computed from it.
+   - **Transmit Power**: The end devices leave LoRaWAN's ADR on and never set a power, so The Things Network chose the transmit power of each uplink: 14 dBm for about two thirds of the uplinks, 12 dBm for about one third, and less for under 1 %. The export does not record it. Notebook 02 replays TTN's ADR on the export and saves the power of every uplink (`tx_power_per_uplink.csv`); notebook 03 adds it as `tx_power` (dBm), and the path loss `exp_pl` is computed from it.
 
 ### 2. **Path Loss Models**
    - **LDPLM-MW**: Considers structural walls, providing a baseline for understanding indoor signal behavior.
@@ -43,6 +43,20 @@ The dataset includes measurements of:
 ### 3. **Data Analysis**
    - Models are trained and validated using the dataset, with performance metrics such as **RMSE)** and **R²** to evaluate accuracy. 
    - Comparative analysis between LDPLM-MW and LDPLM-MW-EP is performed to demonstrate the improvement.
+
+### 4. **Notebooks**
+Run 01 to 06 in order; each reads the files the earlier ones write in `all_data_files/`. 07 and 08 stand alone.
+
+| Notebook | Reads | Writes |
+|---|---|---|
+| 01 Data Querying | InfluxDB | `unsorted_combined_measurements_data.csv`: every uplink as received from TTN (Zenodo file 1) |
+| 02 TTN ADR Replay | the raw uplinks | `tx_power_per_uplink.csv`: the transmit power of every uplink |
+| 03 Data Sorting | the raw uplinks, the transmit power | `combined_measurements_data.csv`: uplinks received by `kerlink001`, Oct 2024 to Sep 2025, without duplicates |
+| 04 Exploratory Data Analysis | the sorted uplinks | `aggregated_measurements_data.csv` (Zenodo file 2), `visually_cleaned_df.csv`; `statistical_description.xlsx` in this repository |
+| 05 Anomalies Removal with SF11&SF12 | the visually cleaned data | `cleaned_dataset_per_device.csv` (Zenodo file 3) |
+| 06 Log-Distance Path Loss Modeling | the cleaned dataset | fits and cross-validation of COST 231 MWM, LDPLM-MW and LDPLM-MW-EP; `presence_fluctuation.png` |
+| 07 Dataset Animation (stand-alone) | the cleaned dataset | `two_weeks_all_sensors.gif` |
+| 08 Path Loss and Shadowing (stand-alone) | nothing: a simulation of log-distance path loss with walls and shadowing | `PL_and_Shadowing_Simulation.png` |
 
 ---
 
