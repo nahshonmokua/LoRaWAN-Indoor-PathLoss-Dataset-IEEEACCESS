@@ -34,7 +34,7 @@ The dataset includes measurements of:
    - **Sensor Deployment**: Six end devices were strategically placed on the University of Siegen campus to capture a wide range of conditions.  
    - **Environmental Monitoring**: Measurements include CO₂ levels, humidity, temperature, and PM2.5 concentrations.
    - **Data Transmission**: The data was collected using a LoRaWAN network with transmissions to an InfluxDB database via MQTT.
-   - **Transmit Power**: The end devices leave LoRaWAN's ADR on and never set a power, so The Things Network chose the transmit power of each uplink: 14 dBm for about two thirds of the uplinks, 12 dBm for about one third, and less for under 1 %. The export does not record it. `ttn_adr_replay.py` replays TTN's ADR on the export; notebook 02 adds the power as `tx_power` (dBm), and the path loss `exp_pl` is computed from it.
+   - **Transmit Power**: The end devices leave LoRaWAN's ADR on and never set a power, so The Things Network chose the transmit power of each uplink: 14 dBm for about two thirds of the uplinks, 12 dBm for about one third, and less for under 1 %. The export does not record it. Notebook 01b replays TTN's ADR on the export and saves the power of every uplink (`tx_power_per_uplink.csv`); notebook 02 adds it as `tx_power` (dBm), and the path loss `exp_pl` is computed from it.
 
 ### 2. **Path Loss Models**
    - **LDPLM-MW**: Considers structural walls, providing a baseline for understanding indoor signal behavior.
