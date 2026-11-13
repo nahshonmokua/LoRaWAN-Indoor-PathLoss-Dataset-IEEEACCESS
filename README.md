@@ -49,9 +49,9 @@ Run 01 to 06 in order; each reads the files the earlier ones write in `all_data_
 
 | Notebook | Reads | Writes |
 |---|---|---|
-| 01 Data Querying | InfluxDB | `unsorted_combined_measurements_data.csv`: every uplink as received from TTN (Zenodo file 1) |
+| 01 Data Querying | InfluxDB | `unsorted_combined_measurements_data.csv`: every uplink as received from TTN (Zenodo file 1 of v2 and v3) |
 | 02 TTN ADR Replay | the raw uplinks | `tx_power_per_uplink.csv`: the transmit power of every uplink, checked against the received level |
-| 03 Data Sorting | the raw uplinks, the transmit power | `combined_measurements_data.csv`: uplinks received by `kerlink001`, Oct 2024 to Sep 2025, without duplicates |
+| 03 Data Sorting | the raw uplinks, the transmit power | `combined_measurements_data.csv`: uplinks received by `kerlink001`, Oct 2024 to Sep 2025, without duplicates (Zenodo file 1 of v4) |
 | 04 Exploratory Data Analysis | the sorted uplinks | `aggregated_measurements_data.csv` (Zenodo file 2), `visually_cleaned_df.csv`; `statistical_description.xlsx` in this repository |
 | 05 Anomalies Removal with SF11&SF12 | the visually cleaned data | `cleaned_dataset_per_device.csv` (Zenodo file 3) |
 | 06 Log-Distance Path Loss Modeling | the cleaned dataset | fits and cross-validation of COST 231 MWM, LDPLM-MW and LDPLM-MW-EP; `presence_fluctuation.png` |
