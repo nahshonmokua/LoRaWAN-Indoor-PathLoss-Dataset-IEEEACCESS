@@ -17,3 +17,6 @@ venv/
 *.log
 animations/
 *.mp4
+
+# Local material, kept off the remote; the images tracked before (two of them shown in the README) stay tracked
+assets/
